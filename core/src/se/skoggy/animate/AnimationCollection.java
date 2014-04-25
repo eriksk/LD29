@@ -21,6 +21,14 @@ public class AnimationCollection {
         animations.remove(anim);
     }
 
+    public Animation getAnimation(String name){
+        for (Animation animation : animations){
+            if(animation.getName().equals(name))
+                return animation;
+        }
+        return null;
+    }
+
     public List<Animation> getAnimations() {
         return animations;
     }

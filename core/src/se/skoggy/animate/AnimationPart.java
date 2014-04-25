@@ -76,11 +76,11 @@ public class AnimationPart extends GameObject{
         });
     }
 
+    private AnimationKeyFrame interpolationKeyFrame = new AnimationKeyFrame(0f);
     public AnimationKeyFrame getInterpolatedKeyFrame(float positionInTime, float maxTime) {
         AnimationKeyFrame currentFrame = AnimateHelpers.getCurrentFrame(positionInTime, keyFrames);
         AnimationKeyFrame nextFrame = AnimateHelpers.getNextFrame(positionInTime, keyFrames);
 
-        AnimationKeyFrame interpolationKeyFrame = new AnimationKeyFrame(0f);
 
         float progress = AnimateHelpers.getProgress(currentFrame, nextFrame, positionInTime, maxTime);
 

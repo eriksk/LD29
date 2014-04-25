@@ -5,7 +5,7 @@ public class TimerTrig {
 	float interval;
 	float current;
 
-	public TimerTrig(float interval) {
+    public TimerTrig(float interval) {
 		this.interval = interval;
 	}
 
@@ -41,6 +41,10 @@ public class TimerTrig {
 		}
 	}
 
+    public float getTime() {
+        return current;
+    }
+
 	public void setToTrigNextTime(){
 		current = interval;
 	}
@@ -52,4 +56,5 @@ public class TimerTrig {
 	public boolean isDone(){
 		return progress() == 1f;
 	}
+
 }
